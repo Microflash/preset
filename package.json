@@ -1,0 +1,39 @@
+{
+  "name": "@microflash/preset",
+  "version": "0.0.1",
+  "description": "A modern CSS preset",
+	"keywords": [
+		"css",
+		"preset",
+		"reset"
+	],
+  "author": "Naiyer Asif (https://naiyer.dev)",
+  "license": "MIT",
+	"repository": "https://github.com/Microflash/preset.git",
+	"bugs": {
+		"url": "https://github.com/Microflash/preset/issues"
+	},
+	"homepage": "https://github.com/Microflash/preset#readme",
+  "main": "dist/preset.min.css",
+	"exports": {
+		".": "./dist/preset.min.css",
+		"./scss": "./src/preset.scss"
+	},
+  "scripts": {
+    "dist": "npm run compile && npm run build && npm run minify",
+		"compile": "sass --no-source-map src/preset.scss src/preset.css",
+    "build": "postcss src/preset.css --output dist/preset.css --map dist",
+    "minify": "csso dist/preset.css --output dist/preset.min.css --source-map inline"
+  },
+  "devDependencies": {
+    "csso-cli": "^4.0.2",
+    "postcss": "^8.4.21",
+    "postcss-cli": "^10.1.0",
+    "postcss-combine-duplicated-selectors": "^10.0.3",
+    "postcss-preset-env": "^8.0.1",
+    "sass": "^1.59.3"
+  },
+  "browserslist": [
+    "defaults, not IE > 0"
+  ]
+}
