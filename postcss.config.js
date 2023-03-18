@@ -1,7 +1,8 @@
 const postcssPresetEnv = require("postcss-preset-env")
 const postcssCombineDuplicatedSelectors = require("postcss-combine-duplicated-selectors")
 
-module.exports = {
+module.exports = (ctx) => ({
+	map: ctx.options.map,
 	plugins: [
 		postcssPresetEnv({
 			preserve: true,
@@ -15,4 +16,4 @@ module.exports = {
 		}),
 		postcssCombineDuplicatedSelectors(),
 	]
-}
+})

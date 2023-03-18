@@ -1,6 +1,6 @@
 {
   "name": "@microflash/preset",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A modern CSS preset",
 	"keywords": [
 		"css",
@@ -22,8 +22,8 @@
   "scripts": {
     "dist": "npm run compile && npm run build && npm run minify",
 		"compile": "sass --no-source-map src/preset.scss src/preset.css",
-    "build": "postcss src/preset.css --output dist/preset.css --map dist",
-    "minify": "csso dist/preset.css --output dist/preset.min.css --source-map inline"
+    "build": "postcss src/preset.css --output dist/preset.css --map",
+    "minify": "csso dist/preset.css --output dist/preset.min.css --source-map file"
   },
   "devDependencies": {
     "csso-cli": "^4.0.2",
