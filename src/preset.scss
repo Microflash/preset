@@ -1,15 +1,15 @@
-/*! Preset v0.0.2 | MIT License | https://github.com/Microflash/preset */
-:where(html) {
+/*! Preset v0.5.0 | MIT License | https://github.com/Microflash/preset */
+*,
+::before,
+::after {
 	box-sizing: border-box;
+}
+
+:where(html) {
+	// https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/
 	text-size-adjust: 100%;
 	// allow percentage based heights for the children
 	block-size: 100%;
-
-	// traditional anti-aliasing for hidpi devices
-	@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx) {
-		-moz-osx-font-smoothing: grayscale;
-		-webkit-font-smoothing: antialiased;
-	}
 
 	// smooth scrolling when reduced-motion is disabled
 	@media (prefers-reduced-motion: no-preference) {
@@ -28,18 +28,15 @@
 
 * {
 	margin: 0;
-	// adjust the line-height based on x-height defined by the font
-	// see: https://kittygiraudel.com/2020/05/18/using-calc-to-figure-out-optimal-line-height/
+	// https://kittygiraudel.com/2020/05/18/using-calc-to-figure-out-optimal-line-height/
 	line-height: calc(0.3rem + 2ex + 0.3rem);
 	// avoid text overflow
 	overflow-wrap: break-word;
+}
 
-	&,
-	&::before,
-	&::after {
-		// inherit the box-sizing from html element as it easier to undo if needed
-		box-sizing: inherit;
-	}
+:where(:not(fieldset, progress, meter)) {
+	background-origin: border-box;
+	background-repeat: no-repeat;
 }
 
 :where(abbr[title]) {
@@ -48,9 +45,23 @@
 	cursor: help;
 }
 
+:where(ul, ol)[role="list"] {
+	list-style: none;
+}
+
 :where(img, svg, canvas, audio, video, iframe, embed, object) {
 	display: block;
 	max-inline-size: 100%;
+}
+
+:where(img, svg, video) {
+	block-size: auto;
+}
+
+:where(svg) {
+	// always keep strokes rounded
+	stroke-linecap: round;
+	stroke-linejoin: round;
 }
 
 :where(iframe) {
@@ -58,17 +69,29 @@
 }
 
 // inherit typography styles from the parent and not the operating system
-:where(input, button, textarea, select),
+:where(input, button, textarea, select, optgroup),
 :where(input[type="file"])::-webkit-file-upload-button {
 	color: inherit;
 	font: inherit;
+	font-size: inherit;
 	letter-spacing: inherit;
+	word-spacing: inherit;
+}
+
+:where(textarea) {
+	resize: vertical;
+
+	// allow textarea to resize in block direction based on writing mode and direction values
+	@supports (resize: block) {
+		resize: block;
+	}
 }
 
 // emphasize that interactive elements are interactive
 :where(a[href], area, button, input, label[for], select, summary, textarea, [tabindex]:not([tabindex*="-"])) {
 	cursor: pointer;
 	touch-action: manipulation;
+	-webkit-tap-highlight-color: transparent;
 }
 
 :where(input[type="file"]) {
@@ -101,11 +124,11 @@
 
 // animate focus outline
 @media (prefers-reduced-motion: no-preference) {
-	:focus-visible {
+	:where(:focus-visible) {
 		transition: outline-offset 145ms cubic-bezier(0.25, 0, 0.4, 1);
 	}
 
-	:where(:not(:active)):focus-visible {
+	:where(:not(:active):focus-visible) {
 		transition-duration: 0.25s;
 	}
 }
