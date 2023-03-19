@@ -1,5 +1,8 @@
 # @microflash/preset
 
+[![npm](https://img.shields.io/npm/v/@microflash/preset)](https://www.npmjs.com/package/@microflash/preset)
+[![license](https://img.shields.io/github/license/Microflash/preset)](./LICENSE.md)
+
 A modern CSS preset
 
 - [What's this?](#whats-this)
