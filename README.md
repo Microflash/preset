@@ -1,3 +1,5 @@
+![preset](./banner.webp)
+
 # @microflash/preset
 
 [![npm](https://img.shields.io/npm/v/@microflash/preset)](https://www.npmjs.com/package/@microflash/preset)
