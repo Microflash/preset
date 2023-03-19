@@ -1,6 +1,6 @@
 ![preset](./banner.webp)
 
-# @microflash/preset
+# preset
 
 [![npm](https://img.shields.io/npm/v/@microflash/preset)](https://www.npmjs.com/package/@microflash/preset)
 [![license](https://img.shields.io/github/license/Microflash/preset)](./LICENSE.md)
@@ -15,7 +15,7 @@ A modern CSS preset
 
 ## What's this?
 
-`@microflash/preset` is a CSS reset to baseline the browser styles to give you a uniform foundation for building your custom styles on top of it.
+`preset` is a CSS reset to baseline the browser styles to give you a uniform foundation for building your custom styles on top of it.
 
 ## Install
 
@@ -25,16 +25,15 @@ In Node.js, install with [npm](https://docs.npmjs.com/cli/install):
 npm install @microflash/preset
 ```
 
-In Deno, with [esm.sh](https://esm.sh/):
+In Deno, with [unpkg.com](https://unpkg.com):
 
 ```js
-import preset from "https://esm.sh/@microflash/preset"
+import "https://unpkg.com/@microflash/preset"
 ```
 
-In browsers, with [esm.sh](https://esm.sh/), [unpkg.com](https://unpkg.com) or [jsdelivr.net](https://jsdelivr.net):
+In browsers, with [unpkg.com](https://unpkg.com) or [jsdelivr.net](https://jsdelivr.net):
 
 ```css
-<link rel="stylesheet" href="https://esm.sh/@microflash/preset">
 <link rel="stylesheet" href="https://unpkg.com/@microflash/preset">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@microflash/preset">
 ```
@@ -43,7 +42,7 @@ In browsers, with [esm.sh](https://esm.sh/), [unpkg.com](https://unpkg.com) or [
 
 In Node.js or Deno, importing the CSS in the entrypoint file of your application should include the `@microflash/preset` in the final CSS bundle. Make sure that this is the first CSS import before including any other CSS files.
 
-If you're using Sass, use `https://esm.sh/@microflash/preset/scss` in the main Sass file before any other rules.
+If you're using Sass, use `https://unpkg.com/@microflash/preset/src/preset.scss` in the main Sass file before any other rules.
 
 In browser, including the `<link>` before any other stylesheet should do the trick.
 
