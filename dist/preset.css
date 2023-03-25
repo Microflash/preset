@@ -1,4 +1,4 @@
-/*! Preset v0.6.1 | MIT License | https://github.com/Microflash/preset */
+/*! Preset v0.6.2 | MIT License | https://github.com/Microflash/preset */
 *,
 ::before,
 ::after {
@@ -32,15 +32,6 @@
   line-height: calc(0.3rem + 2ex + 0.3rem);
   word-wrap: break-word;
   overflow-wrap: break-word;
-}
-
-:where(a, u, ins, abbr) {
-  text-underline-offset: 1px;
-}
-@supports (-moz-appearance: none) {
-  :where(a, u, ins, abbr) {
-    text-underline-offset: 2px;
-  }
 }
 
 :where(:not(fieldset):not(progress):not(meter)) {
