@@ -10,6 +10,7 @@ A modern CSS preset
 - [What's this?](#whats-this)
 - [Install](#install)
 - [Use](#use)
+- [Decisions](#decisions)
 - [Credits](#credits)
 - [License](#license)
 
@@ -40,11 +41,38 @@ In browsers, with [unpkg.com](https://unpkg.com) or [jsdelivr.net](https://jsdel
 
 ## Use
 
-In Node.js or Deno, importing the CSS in the entrypoint file of your application should include the `@microflash/preset` in the final CSS bundle. Make sure that this is the first CSS import before including any other CSS files.
+In Node.js or Deno, import the CSS in the entrypoint file of your application.
 
-If you're using Sass, use `https://unpkg.com/@microflash/preset/src/preset.scss` in the main Sass file before any other rules.
+```js
+import "@microflash/preset"
+// or using URL import
+import "https://unpkg.com/@microflash/preset"
+```
+
+Make sure that this is the first CSS import before including any other CSS files.
+
+If you're using Sass, you can import Sass file instead of the compiled version. This is useful if you want to compile the CSS for custom browser targets.
+
+You can import the Sass file in the entrypoint of your application as follows.
+
+```js
+import "@microflash/preset/scss"
+// or using URL import
+import "https://unpkg.com/@microflash/preset/src/preset.scss"
+```
+
+Alternatively, you can import it in your main Sass file before any other rules.
+
+```scss
+@use "@microflash/preset/scss";
+// rest of the Sass imports
+```
 
 In browser, including the `<link>` before any other stylesheet should do the trick.
+
+## Decisions
+
+The rationale behind the decisions for the `preset` are available as ADRs (Any Decision Records) under [decisions](./docs/decisions/).
 
 ## Credits
 
