@@ -1,15 +1,16 @@
-/*! Preset v0.6.2 | MIT License | https://github.com/Microflash/preset */
-*,
-::before,
-::after {
-  box-sizing: border-box;
-}
-
+/*! Preset v0.7.0 | MIT License | https://github.com/Microflash/preset */
 :where(html) {
+  box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
      -moz-text-size-adjust: 100%;
           text-size-adjust: 100%;
   height: 100%;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx) {
+  :where(html) {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+  }
 }
 @media (prefers-reduced-motion: no-preference) {
   :where(html)[focus-within].js-focus-within, .js-focus-within :where(html)[focus-within] {
@@ -32,6 +33,9 @@
   line-height: calc(0.3rem + 2ex + 0.3rem);
   word-wrap: break-word;
   overflow-wrap: break-word;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 
 :where(:not(fieldset):not(progress):not(meter)) {
