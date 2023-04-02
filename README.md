@@ -10,6 +10,7 @@ A modern CSS preset
 - [What's this?](#whats-this)
 - [Install](#install)
 - [Use](#use)
+- [Browser support](#browser-support)
 - [Decisions](#decisions)
 - [Credits](#credits)
 - [License](#license)
@@ -69,6 +70,10 @@ Alternatively, you can import it in your main Sass file before any other rules.
 ```
 
 In browser, including the `<link>` before any other stylesheet should do the trick.
+
+## Browser support
+
+`preset` supports [evergreen browsers](https://browsersl.ist/#q=defaults%2C+not+IE+%3E+0).
 
 ## Decisions
 

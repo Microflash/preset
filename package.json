@@ -1,39 +1,38 @@
 {
-  "name": "@microflash/preset",
-  "version": "0.7.0",
-  "description": "A modern CSS preset",
+	"name": "@microflash/preset",
+	"version": "0.7.1",
+	"description": "A modern CSS preset",
 	"keywords": [
 		"css",
 		"preset",
 		"reset"
 	],
-  "author": "Naiyer Asif (https://naiyer.dev)",
-  "license": "MIT",
+	"author": "Naiyer Asif (https://naiyer.dev)",
+	"license": "MIT",
 	"repository": "https://github.com/Microflash/preset.git",
 	"bugs": {
 		"url": "https://github.com/Microflash/preset/issues"
 	},
 	"homepage": "https://github.com/Microflash/preset#readme",
-  "main": "dist/preset.min.css",
+	"main": "dist/preset.min.css",
 	"exports": {
 		".": "./dist/preset.min.css",
 		"./scss": "./src/preset.scss"
 	},
-  "scripts": {
-    "dist": "npm run compile && npm run build && npm run minify",
+	"scripts": {
+		"dist": "npm run compile && npm run build && npm run minify",
 		"compile": "sass --no-source-map src/preset.scss dist/preset.css",
-    "build": "postcss dist/preset.css --replace --map",
-    "minify": "csso dist/preset.css --output dist/preset.min.css --source-map file"
-  },
-  "devDependencies": {
-    "csso-cli": "^4.0.2",
-    "postcss": "^8.4.21",
-    "postcss-cli": "^10.1.0",
-    "postcss-combine-duplicated-selectors": "^10.0.3",
-    "postcss-preset-env": "^8.1.0",
-    "sass": "^1.60.0"
-  },
-  "browserslist": [
-    "defaults, not IE > 0"
-  ]
+		"build": "postcss dist/preset.css --replace --map",
+		"minify": "csso dist/preset.css --output dist/preset.min.css --source-map file"
+	},
+	"devDependencies": {
+		"csso-cli": "^4.0.2",
+		"postcss": "^8.4.21",
+		"postcss-cli": "^10.1.0",
+		"postcss-preset-env": "^8.3.0",
+		"sass": "^1.60.0"
+	},
+	"browserslist": [
+		"defaults, not IE > 0"
+	]
 }

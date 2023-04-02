@@ -1,5 +1,6 @@
-/*! Preset v0.7.0 | MIT License | https://github.com/Microflash/preset */
+/*! Preset v0.7.1 | MIT License | https://github.com/Microflash/preset */
 :where(html) {
+	/// @link https://github.com/Microflash/preset/blob/main/docs/decisions/2023-03-28-inherited-border-box.md
 	box-sizing: border-box;
 	// https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/
 	text-size-adjust: 100%;
