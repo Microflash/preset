@@ -1,4 +1,4 @@
-/*! Preset v0.7.2 | MIT License | https://github.com/Microflash/preset */
+/*! Preset v0.7.3 | MIT License | https://github.com/Microflash/preset */
 :where(html) {
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
@@ -71,8 +71,7 @@
   border: none;
 }
 
-:where(input, button, textarea, select, optgroup),
-:where(input[type=file])::-webkit-file-upload-button {
+:where(input, button, textarea, select, optgroup, input[type=file]::-webkit-file-upload-button, input[type=file]::file-selector-button) {
   color: inherit;
   font: inherit;
   font-size: inherit;
@@ -98,36 +97,12 @@
 :where(input[type=file]) {
   cursor: auto;
 }
-:where(input[type=file])::-webkit-file-upload-button, :where(input[type=file])::file-selector-button {
-  cursor: pointer;
+
+:where(input[type=file]::-webkit-file-upload-button, input[type=file]::file-selector-button) {
+	cursor: pointer;
 }
 
-:where(input[type=file])::-csstools-invalid--webkit-file-upload-button {
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-}
-
-:where(input[type=file])::-csstools-invalid-file-selector-button {
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-}
-
-:where(button, button[type], input[type=button], input[type=submit], input[type=reset]) {
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-}
-
-:where(button, button[type], input[type=button], input[type=submit], input[type=reset]),
-:where(input[type=file]):is(::-webkit-file-upload-button, ::file-selector-button) {
+:where(button, button[type], input[type=button], input[type=submit], input[type=reset], input[type=file]::-webkit-file-upload-button, input[type=file]::file-selector-button) {
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -157,5 +132,3 @@
     transition-duration: 0.25s;
   }
 }
-
-/*# sourceMappingURL=preset.css.map */

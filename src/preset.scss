@@ -1,4 +1,4 @@
-/*! Preset v0.7.2 | MIT License | https://github.com/Microflash/preset */
+/*! Preset v0.7.3 | MIT License | https://github.com/Microflash/preset */
 :where(html) {
 	/// @link https://github.com/Microflash/preset/blob/main/docs/decisions/2023-03-28-inherited-border-box.md
 	box-sizing: border-box;
@@ -78,8 +78,7 @@
 }
 
 // inherit typography styles from the parent and not the operating system
-:where(input, button, textarea, select, optgroup),
-:where(input[type="file"])::-webkit-file-upload-button {
+:where(input, button, textarea, select, optgroup, input[type="file"]::-webkit-file-upload-button, input[type="file"]::file-selector-button) {
 	color: inherit;
 	font: inherit;
 	font-size: inherit;
@@ -105,16 +104,14 @@
 
 :where(input[type="file"]) {
 	cursor: auto;
+}
 
-	&::-webkit-file-upload-button,
-	&::file-selector-button {
-		cursor: pointer;
-	}
+:where(input[type="file"]::-webkit-file-upload-button, input[type="file"]::file-selector-button) {
+	cursor: pointer;
 }
 
 // ensure button text is not selectable
-:where(button, button[type], input[type="button"], input[type="submit"], input[type="reset"]),
-:where(input[type="file"]):is(::-webkit-file-upload-button, ::file-selector-button) {
+:where(button, button[type], input[type="button"], input[type="submit"], input[type="reset"], input[type="file"]::-webkit-file-upload-button, input[type="file"]::file-selector-button) {
 	-webkit-tap-highlight-color: transparent;
 	-webkit-touch-callout: none;
 	user-select: none;
