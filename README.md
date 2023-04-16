@@ -73,7 +73,7 @@ In browser, including the `<link>` before any other stylesheet should do the tri
 
 ## Browser support
 
-`preset` supports [evergreen browsers](https://browsersl.ist/#q=defaults%2C+not+IE+%3E+0).
+`preset` supports [modern browsers](https://browsersl.ist/#q=defaults%2C+not+IE+%3E+0).
 
 ## Decisions
 

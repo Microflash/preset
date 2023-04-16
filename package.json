@@ -1,6 +1,6 @@
 {
 	"name": "@microflash/preset",
-	"version": "0.7.1",
+	"version": "0.7.2",
 	"description": "A modern CSS preset",
 	"keywords": [
 		"css",
@@ -29,8 +29,8 @@
 		"csso-cli": "^4.0.2",
 		"postcss": "^8.4.21",
 		"postcss-cli": "^10.1.0",
-		"postcss-preset-env": "^8.3.0",
-		"sass": "^1.60.0"
+		"postcss-preset-env": "^8.3.1",
+		"sass": "^1.62.0"
 	},
 	"browserslist": [
 		"defaults, not IE > 0"

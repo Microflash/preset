@@ -1,4 +1,4 @@
-/*! Preset v0.7.1 | MIT License | https://github.com/Microflash/preset */
+/*! Preset v0.7.2 | MIT License | https://github.com/Microflash/preset */
 :where(html) {
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
@@ -89,7 +89,7 @@
   }
 }
 
-:where(a[href], area, button, input, label[for], select, summary, textarea, [tabindex]:not([tabindex*="-"])) {
+:where(a[href], area, button, input, label[for], select, summary, textarea, [onclick], [tabindex]:not([tabindex*="-"])) {
   cursor: pointer;
   touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;

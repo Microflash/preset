@@ -1,4 +1,4 @@
-/*! Preset v0.7.1 | MIT License | https://github.com/Microflash/preset */
+/*! Preset v0.7.2 | MIT License | https://github.com/Microflash/preset */
 :where(html) {
 	/// @link https://github.com/Microflash/preset/blob/main/docs/decisions/2023-03-28-inherited-border-box.md
 	box-sizing: border-box;
@@ -97,7 +97,7 @@
 }
 
 // emphasize that interactive elements are interactive
-:where(a[href], area, button, input, label[for], select, summary, textarea, [tabindex]:not([tabindex*="-"])) {
+:where(a[href], area, button, input, label[for], select, summary, textarea, [onclick], [tabindex]:not([tabindex*="-"])) {
 	cursor: pointer;
 	touch-action: manipulation;
 	-webkit-tap-highlight-color: transparent;
