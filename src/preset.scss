@@ -1,4 +1,4 @@
-/*! Preset v0.7.4 | MIT License | https://github.com/Microflash/preset */
+/*! Preset v0.7.5 | MIT License | https://github.com/Microflash/preset */
 :where(html) {
 	/// @link https://github.com/Microflash/preset/blob/main/docs/decisions/2023-03-28-inherited-border-box.md
 	box-sizing: border-box;
@@ -51,10 +51,12 @@
 :where(abbr[title]) {
 	text-decoration-line: underline;
 	text-decoration-style: dotted;
+	border-block-end: none;
 	cursor: help;
 }
 
-:where(ul, ol)[role="list"] {
+:where(ul, ol)[role="list"],
+:where(menu) {
 	list-style: none;
 }
 

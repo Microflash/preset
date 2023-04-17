@@ -1,4 +1,4 @@
-/*! Preset v0.7.4 | MIT License | https://github.com/Microflash/preset */
+/*! Preset v0.7.5 | MIT License | https://github.com/Microflash/preset */
 :where(html) {
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
@@ -46,10 +46,12 @@
 :where(abbr[title]) {
   text-decoration-line: underline;
   text-decoration-style: dotted;
+  border-bottom: none;
   cursor: help;
 }
 
-:where(ul, ol)[role=list] {
+:where(ul, ol)[role=list],
+:where(menu) {
   list-style: none;
 }
 
