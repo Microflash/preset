@@ -1,4 +1,4 @@
-/*! Preset v0.7.5 | MIT License | https://github.com/Microflash/preset */
+/*! Preset v0.7.6 | MIT License | https://github.com/Microflash/preset */
 :where(html) {
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
@@ -81,14 +81,6 @@
   word-spacing: inherit;
 }
 
-:where(input[type=file])::-webkit-file-upload-button {
-  color: inherit;
-  font: inherit;
-  font-size: inherit;
-  letter-spacing: inherit;
-  word-spacing: inherit;
-}
-
 :where(input[type=file])::file-selector-button {
   color: inherit;
   font: inherit;
@@ -115,22 +107,11 @@
 :where(input[type=file]) {
   cursor: auto;
 }
-:where(input[type=file])::-webkit-file-upload-button {
-  cursor: pointer;
-}
 :where(input[type=file])::file-selector-button {
   cursor: pointer;
 }
 
 :where(button, button[type], input[type=button], input[type=submit], input[type=reset]) {
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-}
-
-:where(input[type=file])::-webkit-file-upload-button {
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
