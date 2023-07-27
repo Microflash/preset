@@ -11,7 +11,6 @@ A modern CSS preset
 - [Install](#install)
 - [Use](#use)
 - [Browser support](#browser-support)
-- [Decisions](#decisions)
 - [Credits](#credits)
 - [License](#license)
 
@@ -75,16 +74,13 @@ In browser, including the `<link>` before any other stylesheet should do the tri
 
 `preset` supports [modern browsers](https://browsersl.ist/#q=defaults%2C+not+IE+%3E+0).
 
-## Decisions
-
-The rationale behind the decisions for the `preset` are available as ADRs (Any Decision Records) under [decisions](./docs/decisions/).
-
 ## Credits
 
-- [@joshwcomeau](https://github.com/joshwcomeau) for [My Custom CSS Reset](https://www.joshwcomeau.com/css/custom-css-reset/)
-- [@KittyGiraudel](https://github.com/KittyGiraudel) for [Using calc to figure out optimal line-height](https://kittygiraudel.com/2020/05/18/using-calc-to-figure-out-optimal-line-height/)
-- [@jgthms](https://github.com/jgthms) for [minireset.css](https://github.com/jgthms/minireset.css)
-- [@EllyLoel](https://github.com/EllyLoel) for [reset.css](https://gist.github.com/EllyLoel/4ff8a6472247e6dd2315fd4038926522)
+- [Jeremy Thomas](https://jgthms.com/): [minireset.css](https://github.com/jgthms/minireset.css)
+- [Josh Comeau](https://www.joshwcomeau.com/): [My Custom CSS Reset](https://www.joshwcomeau.com/css/custom-css-reset/)
+- [Jesús Ricarte](https://www.super-simple.net/blog/): [Using calc to figure out optimal line-height](https://kittygiraudel.com/2020/05/18/using-calc-to-figure-out-optimal-line-height/)
+- [Adam Argyle](https://nerdy.dev/): [normalize.src.css](https://github.com/argyleink/open-props/blob/45a735169c62544a176b1d95384aeaf00d81862e/src/extra/normalize.src.css#L1)
+- [Elly Loel](https://www.ellyloel.com/): [reset.css](https://gist.github.com/EllyLoel/4ff8a6472247e6dd2315fd4038926522)
 
 ## License
 
