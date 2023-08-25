@@ -1,4 +1,4 @@
-/*! Preset v1.0.0 | MIT License | https://github.com/Microflash/preset */
+/*! Preset v1.0.1 | MIT License | https://github.com/Microflash/preset */
 * {
   margin: 0;
   line-height: calc(0.3rem + 2ex + 0.3rem);
@@ -13,6 +13,7 @@
 :where(html) {
   height: 100%;
   -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
           text-size-adjust: 100%;
 }
 @media (prefers-reduced-motion: no-preference) {
@@ -34,7 +35,7 @@ body {
        tab-size: var(--preset-tab-size, 2);
 }
 
-:where(:not(:defined), [hidden]) {
+:where([hidden]) {
   display: none;
 }
 
