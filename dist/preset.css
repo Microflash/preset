@@ -1,4 +1,4 @@
-/*! Preset v1.0.2 | MIT License | https://github.com/Microflash/preset */
+/*! Preset v1.0.3 | MIT License | https://github.com/Microflash/preset */
 * {
   margin: 0;
   line-height: calc(0.3rem + 2ex + 0.3rem);
@@ -121,6 +121,10 @@
   :where(textarea) {
     resize: block;
   }
+}
+
+:where(textarea:not([rows])) {
+  min-height: 10em;
 }
 
 :where(a[href], area, button, input:not([type=text]):not([type=email]):not([type=file]):not([type=number]):not([type=password]):not([type=""]):not([type=tel]):not([type=url]), label[for], select, summary, [role=button], [onclick], [tabindex]:not([tabindex*="-"])),

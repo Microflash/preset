@@ -1,4 +1,4 @@
-/*! Preset v1.0.2 | MIT License | https://github.com/Microflash/preset */
+/*! Preset v1.0.3 | MIT License | https://github.com/Microflash/preset */
 
 // 1. Remove default margin in all browsers
 // 2. Set `line-height` based on x-height of the font and `font-size` to automatically adjust for all `font-size` values
@@ -135,6 +135,11 @@
 	@supports (resize: block) {
 		resize: block; // 2
 	}
+}
+
+// Make sure textareas without a rows attribute are not tiny
+:where(textarea:not([rows])) {
+	min-block-size: 10em;
 }
 
 // Add explicit cursor to indicate clickable elements
