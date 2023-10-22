@@ -1,4 +1,4 @@
-/*! Preset v1.0.1 | MIT License | https://github.com/Microflash/preset */
+/*! Preset v1.0.2 | MIT License | https://github.com/Microflash/preset */
 
 // 1. Remove default margin in all browsers
 // 2. Set `line-height` based on x-height of the font and `font-size` to automatically adjust for all `font-size` values
@@ -32,7 +32,7 @@
 
 // 1. Span the entire `block-size` to allow percentage based `block-size` for the children
 // 2. Standardize tab-based indentation size in code blocks
-body {
+:where(body) {
 	min-block-size: 100%; // 1
 	tab-size: var(--preset-tab-size, 2); // 2
 }
@@ -61,6 +61,11 @@ body {
 // Balance the characters on each line for layout quality and legibility
 :where(h1, h2, h3, h4, h5, h6) {
 	text-wrap: balance;
+}
+
+// Balance the characters on last 4 lines to avoid orphans
+:where(p) {
+	text-wrap: pretty;
 }
 
 // Treat media elements as block elements to prevent layout issues, such as addition of `line-height` by user-agents

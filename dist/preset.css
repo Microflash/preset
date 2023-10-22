@@ -1,4 +1,4 @@
-/*! Preset v1.0.1 | MIT License | https://github.com/Microflash/preset */
+/*! Preset v1.0.2 | MIT License | https://github.com/Microflash/preset */
 * {
   margin: 0;
   line-height: calc(0.3rem + 2ex + 0.3rem);
@@ -25,7 +25,7 @@
   }
 }
 
-body {
+:where(body) {
   min-height: 100%;
   -moz-tab-size: 2;
     -o-tab-size: 2;
@@ -53,6 +53,10 @@ body {
 
 :where(h1, h2, h3, h4, h5, h6) {
   text-wrap: balance;
+}
+
+:where(p) {
+  text-wrap: pretty;
 }
 
 :where(img, svg, canvas, audio, video, iframe, embed, object) {
