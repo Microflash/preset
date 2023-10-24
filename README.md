@@ -11,6 +11,7 @@ A modern CSS preset
 - [Install](#install)
 - [Use](#use)
 - [Browser support](#browser-support)
+- [API](#api)
 - [Credits](#credits)
 - [License](#license)
 
@@ -29,12 +30,12 @@ npm install @microflash/preset
 In Deno, with [unpkg.com](https://unpkg.com):
 
 ```js
-import "https://unpkg.com/@microflash/preset"
+import "https://unpkg.com/@microflash/preset";
 ```
 
 In browsers, with [unpkg.com](https://unpkg.com) or [jsdelivr.net](https://jsdelivr.net):
 
-```css
+```html
 <link rel="stylesheet" href="https://unpkg.com/@microflash/preset">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@microflash/preset">
 ```
@@ -44,9 +45,9 @@ In browsers, with [unpkg.com](https://unpkg.com) or [jsdelivr.net](https://jsdel
 In Node.js or Deno, import the CSS in the entrypoint file of your application.
 
 ```js
-import "@microflash/preset"
+import "@microflash/preset";
 // or using URL import
-import "https://unpkg.com/@microflash/preset"
+import "https://unpkg.com/@microflash/preset";
 ```
 
 Make sure that this is the first CSS import before including any other CSS files.
@@ -56,9 +57,9 @@ If you're using Sass, you can import Sass file instead of the compiled version. 
 You can import the Sass file in the entrypoint of your application as follows.
 
 ```js
-import "@microflash/preset/scss"
+import "@microflash/preset/scss";
 // or using URL import
-import "https://unpkg.com/@microflash/preset/src/preset.scss"
+import "https://unpkg.com/@microflash/preset/src/preset.scss";
 ```
 
 Alternatively, you can import it in your main Sass file before any other rules.
@@ -74,13 +75,19 @@ In browser, including the `<link>` before any other stylesheet should do the tri
 
 `preset` supports [modern browsers](https://browsersl.ist/#q=defaults%2C+not+IE+%3E+0).
 
+## API
+
+You can customize some aspects of `preset` through CSS properties. You can define these properties in `:root` or `html` scope.
+
+- `--preset-line-height` (default: `calc(0.3rem + 2ex + 0.3rem)`) to override the line-height
+- `--preset-tab-size` (default: `2`) to control the width of code block indentation
+- `--preset-stroke-color` (default: `currentColor`) to override the stroke color of SVG with no fill
+- `--preset-dialog-backdrop-filter` (default: `blur(25px)`) to override the backdrop filter of the dialog
+- `--preset-table-caption-side` (default: `bottom`) to customize caption position of a table caption
+
 ## Credits
 
-- [Jeremy Thomas](https://jgthms.com/): [minireset.css](https://github.com/jgthms/minireset.css)
-- [Josh Comeau](https://www.joshwcomeau.com/): [My Custom CSS Reset](https://www.joshwcomeau.com/css/custom-css-reset/)
-- [Jesús Ricarte](https://www.super-simple.net/blog/): [Using calc to figure out optimal line-height](https://kittygiraudel.com/2020/05/18/using-calc-to-figure-out-optimal-line-height/)
-- [Adam Argyle](https://nerdy.dev/): [normalize.src.css](https://github.com/argyleink/open-props/blob/45a735169c62544a176b1d95384aeaf00d81862e/src/extra/normalize.src.css#L1)
-- [Elly Loel](https://www.ellyloel.com/): [reset.css](https://gist.github.com/EllyLoel/4ff8a6472247e6dd2315fd4038926522)
+[Adam Argyle](https://github.com/argyleink/open-props/blob/45a735169c62544a176b1d95384aeaf00d81862e/src/extra/normalize.src.css#L1), [Andy Bell](https://andy-bell.co.uk/a-more-modern-css-reset/), [Elly Loel](https://gist.github.com/EllyLoel/4ff8a6472247e6dd2315fd4038926522), [Jeremy Thomas](https://github.com/jgthms/minireset.css), [Jesús Ricarte](https://kittygiraudel.com/2020/05/18/using-calc-to-figure-out-optimal-line-height/), [Josh Comeau](https://www.joshwcomeau.com/css/custom-css-reset/)
 
 ## License
 
