@@ -1,13 +1,13 @@
 {
 	"name": "@microflash/preset",
-	"version": "1.0.3",
+	"version": "1.5.0",
 	"description": "A modern CSS preset",
 	"keywords": [
 		"css",
 		"preset",
 		"reset"
 	],
-	"author": "Naiyer Asif (https://naiyer.dev)",
+	"author": "Naiyer Asif (https://www.naiyerasif.com)",
 	"license": "MIT",
 	"repository": "https://github.com/Microflash/preset.git",
 	"bugs": {
@@ -27,12 +27,12 @@
 	},
 	"devDependencies": {
 		"csso-cli": "^4.0.2",
-		"postcss": "^8.4.31",
-		"postcss-cli": "^10.1.0",
-		"postcss-preset-env": "^9.2.0",
-		"sass": "^1.69.4"
+		"postcss": "^8.4.33",
+		"postcss-cli": "^11.0.0",
+		"postcss-preset-env": "^9.3.0",
+		"sass": "^1.69.7"
 	},
 	"browserslist": [
-		"defaults, not IE > 0"
+		"defaults"
 	]
 }
