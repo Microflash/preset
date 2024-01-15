@@ -1,4 +1,4 @@
-/*! Preset v1.5.1 | MIT License | https://github.com/Microflash/preset */
+/*! Preset v2.0.0 | MIT License | https://github.com/Microflash/preset */
 
 // 1. Set `line-height` based on x-height of the font and `font-size` to automatically adjust for all `font-size` values
 // 2. Prevent text overflow for inline elements
@@ -73,16 +73,22 @@
 	text-wrap: pretty;
 }
 
-// Treat media elements as block elements to prevent layout issues, such as addition of `line-height` by user-agents
+// 1. Remove whitespace around media caused by line-height
+// 2. Italicise alt text or title of media to visually distinguish from surrounding copy
+// 3. Set up margin for optional `shape-outside`
 :where(img, svg, canvas, audio, video, iframe, embed, object) {
-	display: block;
+	vertical-align: middle; // 1
+	font-style: italic; // 2
+	shape-margin: 0.75rem; // 3
 }
 
 // 1. Stop media from overflowing the container
 // 2. Maintain aspect-ratio based on `block-size` / `inline-size`
+// 3. Let optional low-quality image placeholders span the entire box
 :where(img, svg, video) {
 	max-inline-size: 100%; // 1
 	block-size: auto; // 2
+	background-size: cover; // 3
 }
 
 // 1. Inherit `color` for stroke

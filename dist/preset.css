@@ -1,4 +1,4 @@
-/*! Preset v1.5.1 | MIT License | https://github.com/Microflash/preset */
+/*! Preset v2.0.0 | MIT License | https://github.com/Microflash/preset */
 * {
   line-height: calc(0.3rem + 2ex + 0.3rem);
   line-height: var(--preset-line-height, calc(0.3rem + 2ex + 0.3rem));
@@ -64,12 +64,15 @@
 }
 
 :where(img, svg, canvas, audio, video, iframe, embed, object) {
-  display: block;
+  vertical-align: middle;
+  font-style: italic;
+  shape-margin: 0.75rem;
 }
 
 :where(img, svg, video) {
   max-width: 100%;
   height: auto;
+  background-size: cover;
 }
 
 :where(svg:not([fill][class]), svg[fill=none]:not([class])) {

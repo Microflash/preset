@@ -88,7 +88,7 @@ You can customize some aspects of `preset` through CSS properties. You can defin
 
 ## Credits
 
-[Adam Argyle](https://github.com/argyleink/open-props/blob/45a735169c62544a176b1d95384aeaf00d81862e/src/extra/normalize.src.css#L1), [Andy Bell](https://andy-bell.co.uk/a-more-modern-css-reset/), [Elly Loel](https://gist.github.com/EllyLoel/4ff8a6472247e6dd2315fd4038926522), [Jeremy Thomas](https://github.com/jgthms/minireset.css), [Jesús Ricarte](https://kittygiraudel.com/2020/05/18/using-calc-to-figure-out-optimal-line-height/), [Josh Comeau](https://www.joshwcomeau.com/css/custom-css-reset/), [Kevin Powell](https://www.youtube.com/watch?v=cCAtD_BAHNw)
+[Adam Argyle](https://github.com/argyleink/open-props/blob/45a735169c62544a176b1d95384aeaf00d81862e/src/extra/normalize.src.css#L1), [Andy Bell](https://andy-bell.co.uk/a-more-modern-css-reset/), [Elly Loel](https://gist.github.com/EllyLoel/4ff8a6472247e6dd2315fd4038926522), [Harry Roberts](https://twitter.com/csswizardry/status/1717841334462005661), [Jeremy Thomas](https://github.com/jgthms/minireset.css), [Jesús Ricarte](https://kittygiraudel.com/2020/05/18/using-calc-to-figure-out-optimal-line-height/), [Josh Comeau](https://www.joshwcomeau.com/css/custom-css-reset/), [Kevin Powell](https://www.youtube.com/watch?v=cCAtD_BAHNw)
 
 ## License
 
