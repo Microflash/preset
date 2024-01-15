@@ -1,4 +1,4 @@
-/*! Preset v1.5.0 | MIT License | https://github.com/Microflash/preset */
+/*! Preset v1.5.1 | MIT License | https://github.com/Microflash/preset */
 
 // 1. Set `line-height` based on x-height of the font and `font-size` to automatically adjust for all `font-size` values
 // 2. Prevent text overflow for inline elements
@@ -79,7 +79,7 @@
 }
 
 // 1. Stop media from overflowing the container
-// 2. Automatically adjust the `block-size` based on `inline-size`
+// 2. Maintain aspect-ratio based on `block-size` / `inline-size`
 :where(img, svg, video) {
 	max-inline-size: 100%; // 1
 	block-size: auto; // 2
@@ -87,7 +87,7 @@
 
 // 1. Inherit `color` for stroke
 // 2. Keep the strokes rounded for SVGs without fill
-:where(svg:not([fill]), svg[fill="none"]) {
+:where(svg:not([fill][class]), svg[fill="none"]:not([class])) {
 	stroke: var(--preset-stroke-color, currentColor); // 1
 	stroke-linecap: round; // 2
 	stroke-linejoin: round; // 2
@@ -168,7 +168,7 @@
 }
 
 // Add explicit cursor to indicate disabled elements
-:where(button, button[type], input[type="button"], input[type="submit"], input[type="reset"])[disabled] {
+:where(button, button[type], input[type="button"], input[type="image"], input[type="submit"], input[type="reset"])[disabled] {
 	cursor: not-allowed;
 }
 

@@ -1,4 +1,4 @@
-/*! Preset v1.5.0 | MIT License | https://github.com/Microflash/preset */
+/*! Preset v1.5.1 | MIT License | https://github.com/Microflash/preset */
 * {
   line-height: calc(0.3rem + 2ex + 0.3rem);
   line-height: var(--preset-line-height, calc(0.3rem + 2ex + 0.3rem));
@@ -72,7 +72,7 @@
   height: auto;
 }
 
-:where(svg:not([fill]), svg[fill=none]) {
+:where(svg:not([fill][class]), svg[fill=none]:not([class])) {
   stroke: currentColor;
   stroke: var(--preset-stroke-color, currentColor);
   stroke-linecap: round;
@@ -149,7 +149,7 @@
           user-select: none;
 }
 
-:where(button, button[type], input[type=button], input[type=submit], input[type=reset])[disabled] {
+:where(button, button[type], input[type=button], input[type=image], input[type=submit], input[type=reset])[disabled] {
   cursor: not-allowed;
 }
 
