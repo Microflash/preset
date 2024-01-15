@@ -1,4 +1,4 @@
-const postcssPresetEnv = require("postcss-preset-env")
+const postcssPresetEnv = require("postcss-preset-env");
 
 module.exports = (ctx) => ({
 	map: ctx.options.map,
@@ -11,7 +11,8 @@ module.exports = (ctx) => ({
 				"focus-within-pseudo-class": true,
 				"is-pseudo-class": true,
 				"logical-properties-and-values": true,
+				"logical-resize": true
 			}
 		}),
 	]
-})
+});

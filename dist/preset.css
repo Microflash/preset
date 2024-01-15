@@ -1,6 +1,5 @@
-/*! Preset v1.0.3 | MIT License | https://github.com/Microflash/preset */
+/*! Preset v1.5.0 | MIT License | https://github.com/Microflash/preset */
 * {
-  margin: 0;
   line-height: calc(0.3rem + 2ex + 0.3rem);
   line-height: var(--preset-line-height, calc(0.3rem + 2ex + 0.3rem));
   word-wrap: break-word;
@@ -10,11 +9,16 @@
   box-sizing: border-box;
 }
 
+:where(:not(dialog)) {
+  margin: 0;
+}
+
 :where(html) {
   height: 100%;
   -webkit-text-size-adjust: 100%;
      -moz-text-size-adjust: 100%;
           text-size-adjust: 100%;
+  hanging-punctuation: first last;
 }
 @media (prefers-reduced-motion: no-preference) {
   :where(html)[focus-within].js-focus-within, .js-focus-within :where(html)[focus-within] {
@@ -35,7 +39,7 @@
        tab-size: var(--preset-tab-size, 2);
 }
 
-:where([hidden]) {
+:where([hidden]:not([hidden=until-found])) {
   display: none;
 }
 
@@ -161,5 +165,17 @@
   }
   :where(:not(:active):focus-visible) {
     transition-duration: 0.25s;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .js-has-pseudo :where([csstools-has-1m-2w-2p-37-14-1m-38-2p-36-2v-2t-38-15]) {
+    scroll-behavior: smooth;
+    scroll-padding-block-start: 3rem;
+    scroll-padding-block-start: var(--preset-scroll-padding, 3rem);
+  }
+  :where(:has(:target)) {
+    scroll-behavior: smooth;
+    scroll-padding-block-start: 3rem;
+    scroll-padding-block-start: var(--preset-scroll-padding, 3rem);
   }
 }

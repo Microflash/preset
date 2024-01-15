@@ -1,31 +1,36 @@
-/*! Preset v1.0.3 | MIT License | https://github.com/Microflash/preset */
+/*! Preset v1.5.0 | MIT License | https://github.com/Microflash/preset */
 
-// 1. Remove default margin in all browsers
-// 2. Set `line-height` based on x-height of the font and `font-size` to automatically adjust for all `font-size` values
-// 3. Prevent text overflow for inline elements
-// 4. Change from initial value `box-sizing: content-box` so that `inline-size` is not affected by `padding` or `border`
+// 1. Set `line-height` based on x-height of the font and `font-size` to automatically adjust for all `font-size` values
+// 2. Prevent text overflow for inline elements
+// 3. Change from initial value `box-sizing: content-box` so that `inline-size` is not affected by `padding` or `border`
 * {
-	margin: 0; // 1
-	line-height: var(--preset-line-height, calc(0.3rem + 2ex + 0.3rem)); // 2
-	overflow-wrap: break-word; // 3
+	line-height: var(--preset-line-height, calc(0.3rem + 2ex + 0.3rem)); // 1
+	overflow-wrap: break-word; // 2
 
 	&,
 	&::before,
 	&::after {
-		box-sizing: border-box; // 4
+		box-sizing: border-box; // 3
 	}
+}
+
+// Remove default margin of all elements except dialog
+:where(:not(dialog)) {
+	margin: 0;
 }
 
 // 1. Allow percentage based `block-size` for the children of document
 // 2. Prevent adjustments of `font-size` after orientation changes
-// 3. Enable smooth scrolling when reduced-motion is unspecified
+// 3. Keep hanging punctuations outside the line box
+// 4. Enable smooth scrolling when reduced-motion is unspecified
 :where(html) {
 	block-size: 100%; // 1
 	text-size-adjust: 100%; // 2
+	hanging-punctuation: first last; // 3
 
 	@media (prefers-reduced-motion: no-preference) {
 		&:focus-within {
-			scroll-behavior: smooth; // 3
+			scroll-behavior: smooth; // 4
 		}
 	}
 }
@@ -38,7 +43,7 @@
 }
 
 // Hide elements with `hidden` attribute
-:where([hidden]) {
+:where([hidden]:not([hidden="until-found"])) {
 	display: none;
 }
 
@@ -175,5 +180,13 @@
 
 	:where(:not(:active):focus-visible) {
 		transition-duration: 0.25s;
+	}
+}
+
+// Enable smooth-scrolling for nested scrollable elements
+@media (prefers-reduced-motion: no-preference) {
+	:where(:has(:target)) {
+		scroll-behavior: smooth;
+		scroll-padding-block-start: var(--preset-scroll-padding, 3rem);
 	}
 }
