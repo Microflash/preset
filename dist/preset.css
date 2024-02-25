@@ -1,4 +1,4 @@
-/*! Preset v2.0.0 | MIT License | https://github.com/Microflash/preset */
+/*! Preset v3.0.0 | MIT License | https://github.com/Microflash/preset */
 * {
   line-height: calc(0.3rem + 2ex + 0.3rem);
   line-height: var(--preset-line-height, calc(0.3rem + 2ex + 0.3rem));
@@ -75,9 +75,7 @@
   background-size: cover;
 }
 
-:where(svg:not([fill][class]), svg[fill=none]:not([class])) {
-  stroke: currentColor;
-  stroke: var(--preset-stroke-color, currentColor);
+:where(svg) {
   stroke-linecap: round;
   stroke-linejoin: round;
 }

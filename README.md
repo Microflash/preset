@@ -81,7 +81,6 @@ You can customize some aspects of `preset` through CSS properties. You can defin
 
 - `--preset-line-height` (default: `calc(0.3rem + 2ex + 0.3rem)`) to override the line-height
 - `--preset-tab-size` (default: `2`) to control the width of code block indentation
-- `--preset-stroke-color` (default: `currentColor`) to override the stroke color of SVG with no fill
 - `--preset-dialog-backdrop-filter` (default: `blur(25px)`) to override the backdrop filter of the dialog
 - `--preset-table-caption-side` (default: `bottom`) to customize caption position of a table caption
 - `--preset-scroll-padding` (default: `3rem`) to set `scroll-padding-block-start` for an element
