@@ -1,4 +1,4 @@
-![preset](./banner.webp)
+![preset](./banner.svg)
 
 # preset
 
@@ -17,7 +17,7 @@ A modern CSS preset
 
 ## What's this?
 
-`preset` is a CSS reset to baseline the browser styles to give you a uniform foundation for building your custom styles on top of it.
+`preset` is a CSS reset to baseline the browser styles. It gives you a uniform foundation to build your custom styles on top of.
 
 ## Install
 
@@ -73,16 +73,17 @@ In browser, including the `<link>` before any other stylesheet should do the tri
 
 ## Browser support
 
-`preset` supports [modern browsers](https://browsersl.ist/#q=defaults%2C+not+IE+%3E+0).
+`preset` supports [modern browsers](https://browsersl.ist/#q=defaults).
 
 ## API
 
 You can customize some aspects of `preset` through CSS properties. You can define these properties in `:root` or `html` scope.
 
-- `--preset-line-height` (default: `calc(0.3rem + 2ex + 0.3rem)`) to override the line-height
-- `--preset-tab-size` (default: `2`) to control the width of code block indentation
-- `--preset-dialog-backdrop-filter` (default: `blur(25px)`) to override the backdrop filter of the dialog
-- `--preset-table-caption-side` (default: `bottom`) to customize caption position of a table caption
+- `--preset-line-height` (default: `calc(0.3rem + 2ex + 0.3rem)`) to set the line-height
+- `--preset-tab-size` (default: `2`) to set the width of code block indentation
+- `--preset-outline-transition` to set the transition applied on the outline
+- `--preset-dialog-backdrop-filter` (default: `blur(25px)`) to set the backdrop filter of the dialog
+- `--preset-table-caption-side` (default: `bottom`) to set caption position of a table caption
 - `--preset-scroll-padding` (default: `3rem`) to set `scroll-padding-block-start` for an element
 
 ## Credits
