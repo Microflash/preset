@@ -1,6 +1,6 @@
 {
 	"name": "@microflash/preset",
-	"version": "3.1.0",
+	"version": "4.0.0",
 	"description": "A modern CSS preset",
 	"keywords": [
 		"css",
@@ -21,17 +21,15 @@
 	},
 	"scripts": {
 		"dist": "npm run compile && npm run build && npm run minify",
-		"compile": "sass --no-source-map src/preset.scss dist/preset.css",
-		"build": "postcss dist/preset.css --replace --no-map",
-		"minify": "csso dist/preset.css --output dist/preset.min.css"
+		"compile": "sass --no-source-map src/preset.scss src/preset.css",
+		"build": "lightningcss --browserslist src/preset.css -o dist/preset.css",
+		"minify": "lightningcss --minify --browserslist src/preset.css -o dist/preset.min.css"
 	},
 	"devDependencies": {
-		"csso-cli": "^4.0.2",
-		"postcss": "^8.4.35",
-		"postcss-cli": "^11.0.0",
-		"postcss-preset-env": "^9.4.0",
-		"sass": "^1.71.1"
+		"lightningcss-cli": "^1.25.1",
+		"sass": "^1.77.4"
 	},
+	"packageManager": "pnpm@9.1.4",
 	"browserslist": [
 		"defaults"
 	]
