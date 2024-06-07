@@ -1,4 +1,4 @@
-/*! Preset v4.0.0 | MIT License | https://github.com/Microflash/preset */
+/*! Preset v4.0.1 | MIT License | https://github.com/Microflash/preset */
 *, :before, :after {
   box-sizing: border-box;
 }
@@ -16,7 +16,6 @@
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   text-size-adjust: 100%;
-  hanging-punctuation: first last;
   block-size: 100%;
 }
 
@@ -29,6 +28,14 @@
     scroll-behavior: smooth;
     scroll-padding-block-start: var(--preset-scroll-padding, 3rem);
   }
+}
+
+:where(:not(:-webkit-any(input, textarea))) {
+  hanging-punctuation: first last;
+}
+
+:where(:not(:is(input, textarea))) {
+  hanging-punctuation: first last;
 }
 
 :where(body) {

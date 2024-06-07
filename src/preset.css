@@ -1,4 +1,4 @@
-/*! Preset v4.0.0 | MIT License | https://github.com/Microflash/preset */
+/*! Preset v4.0.1 | MIT License | https://github.com/Microflash/preset */
 *, ::before, ::after {
   box-sizing: border-box;
 }
@@ -15,7 +15,6 @@
 :where(html) {
   block-size: 100%;
   text-size-adjust: 100%;
-  hanging-punctuation: first last;
 }
 @media (prefers-reduced-motion: no-preference), (update: fast) {
   :where(html):focus-within {
@@ -29,6 +28,10 @@
     scroll-padding-block-start: var(--preset-scroll-padding, 3rem);
   }
 }
+:where(:not(input, textarea)) {
+  hanging-punctuation: first last;
+}
+
 :where(body) {
   min-block-size: 100%;
   tab-size: var(--preset-tab-size, 2);

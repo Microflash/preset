@@ -1,6 +1,6 @@
 {
 	"name": "@microflash/preset",
-	"version": "4.0.0",
+	"version": "4.0.1",
 	"description": "A modern CSS preset",
 	"keywords": [
 		"css",
@@ -29,7 +29,7 @@
 		"lightningcss-cli": "^1.25.1",
 		"sass": "^1.77.4"
 	},
-	"packageManager": "pnpm@9.1.4",
+	"packageManager": "pnpm@9.2.0",
 	"browserslist": [
 		"defaults"
 	]
