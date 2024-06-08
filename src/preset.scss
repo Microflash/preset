@@ -1,4 +1,4 @@
-/*! Preset v4.0.1 | MIT License | https://github.com/Microflash/preset */
+/*! Preset v4.0.2 | MIT License | https://github.com/Microflash/preset */
 
 // sets the default value of `box-sizing` from `content-box` to `border-box`
 // so that `inline-size` is not affected by `padding` or `border`
@@ -25,6 +25,8 @@
 	block-size: 100%;
 	// prevents adjustments of `font-size` after orientation changes
 	text-size-adjust: 100%;
+	// keeps hanging punctuation outside the line box (supported in Safari for now)
+	hanging-punctuation: first last;
 
 	// enables smooth scrolling when reduced-motion is unspecified
 	// opt-out the e-readers which may have low refresh rates using `update: fast`
@@ -42,12 +44,6 @@
 		// puts some breathing room between a targeted element and the edges of the scrollport
 		scroll-padding-block-start: var(--preset-scroll-padding, 3rem);
 	}
-}
-
-// keeps hanging punctuation outside the line box (supported in Safari for now)
-// except for `input` and `textarea` where they should be visible and inside the line box
-:where(:not(input, textarea)) {
-	hanging-punctuation: first last;
 }
 
 :where(body) {
@@ -189,6 +185,11 @@
 // makes sure textareas without `rows` attribute are not tiny
 :where(textarea:not([rows])) {
 	min-block-size: 10em;
+}
+
+// keep hanging punctuation for `input` and `textarea` visible and inside the line box
+:where(input, textarea) {
+	hanging-punctuation: none;
 }
 
 // adds explicit cursor to indicate clickable elements

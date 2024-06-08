@@ -1,4 +1,4 @@
-/*! Preset v4.0.1 | MIT License | https://github.com/Microflash/preset */
+/*! Preset v4.0.2 | MIT License | https://github.com/Microflash/preset */
 *, :before, :after {
   box-sizing: border-box;
 }
@@ -16,6 +16,7 @@
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  hanging-punctuation: first last;
   block-size: 100%;
 }
 
@@ -28,14 +29,6 @@
     scroll-behavior: smooth;
     scroll-padding-block-start: var(--preset-scroll-padding, 3rem);
   }
-}
-
-:where(:not(:-webkit-any(input, textarea))) {
-  hanging-punctuation: first last;
-}
-
-:where(:not(:is(input, textarea))) {
-  hanging-punctuation: first last;
 }
 
 :where(body) {
@@ -172,6 +165,10 @@
 
 :where(textarea:not([rows])) {
   min-block-size: 10em;
+}
+
+:where(input, textarea) {
+  hanging-punctuation: none;
 }
 
 :where(a[href], area, button, input:not(:-webkit-any([type="text"], [type="email"], [type="file"], [type="number"], [type="password"], [type=""], [type="tel"], [type="url"])), label[for], select, summary, [role="button"], [onclick], [tabindex]:not([tabindex*="-"])) {
