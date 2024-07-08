@@ -1,4 +1,4 @@
-![preset](./banner.svg)
+![preset](./banner.png)
 
 # preset
 

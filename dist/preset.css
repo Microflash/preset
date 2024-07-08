@@ -1,4 +1,4 @@
-/*! Preset v4.0.2 | MIT License | https://github.com/Microflash/preset */
+/*! Preset v4.0.3 | MIT License | https://github.com/Microflash/preset */
 *, :before, :after {
   box-sizing: border-box;
 }
@@ -41,18 +41,18 @@
 }
 
 :root {
-  --preset-outline-transition: outline-offset .145s cubic-bezier(.25, 0, .4, 1);
+  --presetOutlineTransition: outline-offset .145s cubic-bezier(.25, 0, .4, 1);
 }
 
 @supports (transition-timing-function: linear(0, 1)) {
   :root {
-    --preset-outline-transition: outline-offset .145s linear(0, .009, .035 2.1%, .141 4.4%, .723 12.9%, .938 16.7%, 1.017, 1.077, 1.121, 1.149 24.3%, 1.159, 1.163, 1.161, 1.154 29.9%, 1.129 32.8%, 1.051 39.6%, 1.017 43.1%, .991, .977 51%, .974 53.8%, .975 57.1%, .997 69.8%, 1.003 76.9%, 1);
+    --presetOutlineTransition: outline-offset .145s linear(0, .009, .035 2.1%, .141 4.4%, .723 12.9%, .938 16.7%, 1.017, 1.077, 1.121, 1.149 24.3%, 1.159, 1.163, 1.161, 1.154 29.9%, 1.129 32.8%, 1.051 39.6%, 1.017 43.1%, .991, .977 51%, .974 53.8%, .975 57.1%, .997 69.8%, 1.003 76.9%, 1);
   }
 }
 
 @media (prefers-reduced-motion: no-preference), (update: fast) {
   :where(:focus-visible) {
-    transition: var(--preset-outline-transition);
+    transition: var(--preset-outline-transition, var(--presetOutlineTransition));
   }
 
   :where(:not(:active):focus-visible) {
