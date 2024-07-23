@@ -1,4 +1,4 @@
-/*! Preset v4.0.3 | MIT License | https://github.com/Microflash/preset */
+/*! Preset v4.1.0 | MIT License | https://github.com/Microflash/preset */
 
 // sets the default value of `box-sizing` from `content-box` to `border-box`
 // so that `inline-size` is not affected by `padding` or `border`
@@ -25,6 +25,8 @@
 	block-size: 100%;
 	// prevents adjustments of `font-size` after orientation changes
 	text-size-adjust: 100%;
+	// opt into user's color scheme preferences
+	color-scheme: light dark;
 	// keeps hanging punctuation outside the line box (supported in Safari for now)
 	hanging-punctuation: first last;
 

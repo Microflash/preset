@@ -1,4 +1,4 @@
-/*! Preset v4.0.3 | MIT License | https://github.com/Microflash/preset */
+/*! Preset v4.1.0 | MIT License | https://github.com/Microflash/preset */
 *, ::before, ::after {
   box-sizing: border-box;
 }
@@ -15,6 +15,7 @@
 :where(html) {
   block-size: 100%;
   text-size-adjust: 100%;
+  color-scheme: light dark;
   hanging-punctuation: first last;
 }
 @media (prefers-reduced-motion: no-preference), (update: fast) {
