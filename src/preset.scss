@@ -1,4 +1,4 @@
-/*! Preset v4.1.0 | MIT License | https://github.com/Microflash/preset */
+/*! Preset v4.2.0 | MIT License | https://github.com/Microflash/preset */
 
 // sets the default value of `box-sizing` from `content-box` to `border-box`
 // so that `inline-size` is not affected by `padding` or `border`
@@ -8,7 +8,7 @@
 
 * {
 	// sets the `line-height` based on x-height of the font and `font-size`
-	// to automatically adjust for all `font-size` values. 
+	// to automatically adjust for all `font-size` values.
 	// prevents the line-height from blowing up for headings where `font-size` is huge
 	line-height: var(--preset-line-height, calc(0.3rem + 2ex + 0.3rem));
 	// prevents text overflow for inline elements
