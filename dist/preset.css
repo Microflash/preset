@@ -1,4 +1,4 @@
-/*! Preset v5.0.0 | MIT License | https://github.com/Microflash/preset */
+/*! Preset v5.0.1 | MIT License | https://github.com/Microflash/preset */
 *, ::before, ::after {
   box-sizing: border-box;
 }
@@ -98,7 +98,6 @@
 
 :where(h1, h2, h3, h4, h5, h6) {
   text-wrap: balance;
-  font-feature-settings: "lnum";
   font-variant-numeric: lining-nums;
 }
 
@@ -150,7 +149,6 @@
 }
 
 :where(td, math, time[datetime*=":"]) {
-  font-feature-settings: tabular-nums lining-nums;
   font-variant-numeric: tabular-nums lining-nums;
 }
 

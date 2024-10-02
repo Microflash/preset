@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [5.0.1] - 2024-10-02
+
+### Removed
+
+- Invalid `font-feature-settings` injected by PostCSS
+
 ## [5.0.0] - 2024-10-02
 
 ### Added
@@ -16,12 +22,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- **Breaking change** Rename `--preset-scroll-padding` as `--preset-scroll-offset`
 - Apply `scroll-margin-block` on `:target` regardless of motion preference
 - Add `rlh` fallback for `scroll-margin-block` for supported browsers
-
-### Removed
-
-- **Breaking change** Rename `--preset-scroll-padding` as `--preset-scroll-offset`
 
 ## [4.1.0] - 2024-07-23
 
@@ -151,6 +154,7 @@ Some of the properties in the reset are now customizable through CSS properties.
 - `--preset-dialog-backdrop-filter` to override the backdrop filter of the dialog (fallback value: `blur(25px)`)
 - `--preset-table-caption-side` to customize caption position of a table caption (fallback value: `bottom`)
 
+[5.0.1]: https://github.com/Microflash/rehype-starry-night/compare/5.0.0...5.0.1
 [5.0.0]: https://github.com/Microflash/rehype-starry-night/compare/4.1.0...5.0.0
 [4.1.0]: https://github.com/Microflash/rehype-starry-night/compare/4.0.3...4.1.0
 [4.0.3]: https://github.com/Microflash/rehype-starry-night/compare/4.0.2...4.0.3
