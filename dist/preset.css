@@ -1,4 +1,4 @@
-/*! Preset v4.2.0 | MIT License | https://github.com/Microflash/preset */
+/*! Preset v5.0.0 | MIT License | https://github.com/Microflash/preset */
 *, ::before, ::after {
   box-sizing: border-box;
 }
@@ -21,6 +21,7 @@
           text-size-adjust: 100%;
   color-scheme: light dark;
   hanging-punctuation: first last;
+  interpolate-size: allow-keywords;
 }
 
 @media (prefers-reduced-motion: no-preference), (update: fast) {
@@ -32,11 +33,16 @@
   }
 }
 
+:where(:target) {
+  scroll-margin-block: 3rem;
+  scroll-margin-block: var(--preset-scroll-offset, 3rem);
+  scroll-margin-block: 3rlh;
+  scroll-margin-block: var(--preset-scroll-offset, 3rlh);
+}
+
 @media (prefers-reduced-motion: no-preference), (update: fast) {
   :where(:has(:target)) {
     scroll-behavior: smooth;
-    scroll-padding-block-start: 3rem;
-    scroll-padding-block-start: var(--preset-scroll-padding, 3rem);
   }
 }
 :where(body) {
@@ -92,9 +98,11 @@
 
 :where(h1, h2, h3, h4, h5, h6) {
   text-wrap: balance;
+  font-feature-settings: "lnum";
+  font-variant-numeric: lining-nums;
 }
 
-:where(td, p) {
+:where(td, p, li, figcaption) {
   text-wrap: pretty;
 }
 
@@ -141,6 +149,11 @@
   caption-side: var(--preset-table-caption-side, bottom);
 }
 
+:where(td, math, time[datetime*=":"]) {
+  font-feature-settings: tabular-nums lining-nums;
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
 :where(input, button, textarea, select, optgroup),
 :where(input[type=file])::file-selector-button {
   color: inherit;
@@ -156,11 +169,7 @@
 
 :where(textarea) {
   resize: vertical;
-}
-@supports (resize: block) {
-  :where(textarea) {
-    resize: block;
-  }
+  resize: block;
 }
 
 :where(textarea:not([rows])) {

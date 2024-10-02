@@ -1,6 +1,4 @@
-![preset](./banner.png)
-
-# preset
+![preset](./banner.svg)
 
 [![npm](https://img.shields.io/npm/v/@microflash/preset)](https://www.npmjs.com/package/@microflash/preset)
 [![license](https://img.shields.io/github/license/Microflash/preset)](./LICENSE.md)
@@ -84,7 +82,7 @@ You can customize some aspects of `preset` through CSS properties. You can defin
 - `--preset-outline-transition` to set the transition applied on the outline
 - `--preset-dialog-backdrop-filter` (default: `blur(25px)`) to set the backdrop filter of the dialog
 - `--preset-table-caption-side` (default: `bottom`) to set caption position of a table caption
-- `--preset-scroll-padding` (default: `3rem`) to set `scroll-padding-block-start` for an element
+- `--preset-scroll-offset` (default: `3rem` or `3rlh` depending on browser support) to set `scroll-margin-block` for an element
 
 ## Credits
 

@@ -5,6 +5,24 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [5.0.0] - 2024-10-02
+
+### Added
+
+- `interpolate-size` on document to allow animating intrinsic sizing keywords such as `height`, `width` and so on. Progressive enhancement, only supported by Chrome for now.
+- Balance text to avoid orphans for `li` and `figcaption` elements
+- Position numbers on baseline for headings, table cells, `math` element and `time` element with timestamp. Progressive enhancement, available if font supports this OpenType feature.
+- Sets numbers at same size for table cells, `math` element and `time` element with timestamp. Progressive enhancement, available if font supports this OpenType feature.
+
+### Changed
+
+- Apply `scroll-margin-block` on `:target` regardless of motion preference
+- Add `rlh` fallback for `scroll-margin-block` for supported browsers
+
+### Removed
+
+- **Breaking change** Rename `--preset-scroll-padding` as `--preset-scroll-offset`
+
 ## [4.1.0] - 2024-07-23
 
 ### Added
@@ -133,6 +151,7 @@ Some of the properties in the reset are now customizable through CSS properties.
 - `--preset-dialog-backdrop-filter` to override the backdrop filter of the dialog (fallback value: `blur(25px)`)
 - `--preset-table-caption-side` to customize caption position of a table caption (fallback value: `bottom`)
 
+[5.0.0]: https://github.com/Microflash/rehype-starry-night/compare/4.1.0...5.0.0
 [4.1.0]: https://github.com/Microflash/rehype-starry-night/compare/4.0.3...4.1.0
 [4.0.3]: https://github.com/Microflash/rehype-starry-night/compare/4.0.2...4.0.3
 [4.0.2]: https://github.com/Microflash/rehype-starry-night/compare/4.0.1...4.0.2
