@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [5.0.2] - 2024-11-19
+
+### Changed
+
+- Set `stroke-linecap: round` and `stroke-linejoin: round` only when they are not already set on SVG
+
+### Fixed
+
+- Selector that ensures button content is not selectable
+
 ## [5.0.1] - 2024-10-02
 
 ### Removed
@@ -154,6 +164,7 @@ Some of the properties in the reset are now customizable through CSS properties.
 - `--preset-dialog-backdrop-filter` to override the backdrop filter of the dialog (fallback value: `blur(25px)`)
 - `--preset-table-caption-side` to customize caption position of a table caption (fallback value: `bottom`)
 
+[5.0.2]: https://github.com/Microflash/rehype-starry-night/compare/5.0.1...5.0.2
 [5.0.1]: https://github.com/Microflash/rehype-starry-night/compare/5.0.0...5.0.1
 [5.0.0]: https://github.com/Microflash/rehype-starry-night/compare/4.1.0...5.0.0
 [4.1.0]: https://github.com/Microflash/rehype-starry-night/compare/4.0.3...4.1.0

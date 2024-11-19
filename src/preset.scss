@@ -1,4 +1,4 @@
-/*! Preset v5.0.1 | MIT License | https://github.com/Microflash/preset */
+/*! Preset v5.0.2 | MIT License | https://github.com/Microflash/preset */
 
 // include content, padding, and border (but not margin) inside the box
 *, ::before, ::after {
@@ -133,9 +133,11 @@
 	background-size: cover;
 }
 
-:where(svg) {
-	// keep the strokes rounded for SVGs
+// keep the strokes rounded for SVGs without these attributes
+:where(svg:not([stroke-linecap])) {
 	stroke-linecap: round;
+}
+:where(svg:not([stroke-linejoin])) {
 	stroke-linejoin: round;
 }
 
@@ -254,7 +256,7 @@
 	button,
 	button[type],
 	input[type="button"],
-	input[type="image"]
+	input[type="image"],
 	input[type="submit"],
 	input[type="reset"]
 ),

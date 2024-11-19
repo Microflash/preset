@@ -1,4 +1,4 @@
-/*! Preset v5.0.1 | MIT License | https://github.com/Microflash/preset */
+/*! Preset v5.0.2 | MIT License | https://github.com/Microflash/preset */
 *, ::before, ::after {
   box-sizing: border-box;
 }
@@ -117,8 +117,11 @@
   background-size: cover;
 }
 
-:where(svg) {
+:where(svg:not([stroke-linecap])) {
   stroke-linecap: round;
+}
+
+:where(svg:not([stroke-linejoin])) {
   stroke-linejoin: round;
 }
 
@@ -210,7 +213,8 @@ textarea,
 :where(button,
 button[type],
 input[type=button],
-input[type=image] input[type=submit],
+input[type=image],
+input[type=submit],
 input[type=reset]),
 :where(input[type=file])::file-selector-button {
   -webkit-touch-callout: none;
