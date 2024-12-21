@@ -1,4 +1,4 @@
-/*! Preset v5.0.2 | MIT License | https://github.com/Microflash/preset */
+/*! Preset v5.0.3 | MIT License | https://github.com/Microflash/preset */
 
 // include content, padding, and border (but not margin) inside the box
 *, ::before, ::after {
@@ -254,7 +254,6 @@
 // ensure button content is not selectable
 :where(
 	button,
-	button[type],
 	input[type="button"],
 	input[type="image"],
 	input[type="submit"],
@@ -268,11 +267,11 @@
 // explicit cursor to indicate disabled elements
 :where(
 	button,
-	button[type],
 	input[type="button"],
 	input[type="image"],
 	input[type="submit"],
-	input[type="reset"]
+	input[type="reset"],
+	[role="button"]
 )[disabled],
 :where(input[type="file"][disabled])::file-selector-button {
 	cursor: not-allowed;

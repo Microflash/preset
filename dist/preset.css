@@ -1,4 +1,4 @@
-/*! Preset v5.0.2 | MIT License | https://github.com/Microflash/preset */
+/*! Preset v5.0.3 | MIT License | https://github.com/Microflash/preset */
 *, ::before, ::after {
   box-sizing: border-box;
 }
@@ -211,7 +211,6 @@ textarea,
 }
 
 :where(button,
-button[type],
 input[type=button],
 input[type=image],
 input[type=submit],
@@ -224,11 +223,11 @@ input[type=reset]),
 }
 
 :where(button,
-button[type],
 input[type=button],
 input[type=image],
 input[type=submit],
-input[type=reset])[disabled],
+input[type=reset],
+[role=button])[disabled],
 :where(input[type=file][disabled])::file-selector-button {
   cursor: not-allowed;
 }
