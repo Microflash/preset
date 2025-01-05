@@ -1,4 +1,4 @@
-/*! Preset v5.0.3 | MIT License | https://github.com/Microflash/preset */
+/*! Preset v5.0.4 | MIT License | https://github.com/Microflash/preset */
 
 // include content, padding, and border (but not margin) inside the box
 *, ::before, ::after {
@@ -107,6 +107,7 @@
 	text-wrap: balance;
 	// position numbers on baseline
 	// progressive enhancement: supported in fonts with this opentype feature
+	font-feature-settings: "lnum";
 	font-variant-numeric: lining-nums;
 }
 
@@ -171,6 +172,7 @@
 // set numbers at same size and position them on baseline
 // progressive enhancement: supported in fonts with these opentype features
 :where(td, math, time[datetime*=":"]) {
+	font-feature-settings: "tnum", "lnum";
 	font-variant-numeric: tabular-nums lining-nums;
 }
 

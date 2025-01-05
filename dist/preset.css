@@ -1,4 +1,4 @@
-/*! Preset v5.0.3 | MIT License | https://github.com/Microflash/preset */
+/*! Preset v5.0.4 | MIT License | https://github.com/Microflash/preset */
 *, ::before, ::after {
   box-sizing: border-box;
 }
@@ -25,9 +25,6 @@
 }
 
 @media (prefers-reduced-motion: no-preference), (update: fast) {
-  :where(html)[focus-within].js-focus-within, .js-focus-within :where(html)[focus-within] {
-    scroll-behavior: smooth;
-  }
   :where(html):focus-within {
     scroll-behavior: smooth;
   }
@@ -69,16 +66,9 @@
 }
 
 @media (prefers-reduced-motion: no-preference), (update: fast) {
-  :where(.focus-visible).js-focus-visible, .js-focus-visible :where(.focus-visible) {
-    transition: outline-offset 145ms cubic-bezier(0.25, 0, 0.4, 1);
-    transition: var(--preset-outline-transition, var(--presetOutlineTransition));
-  }
   :where(:focus-visible) {
     transition: outline-offset 145ms cubic-bezier(0.25, 0, 0.4, 1);
     transition: var(--preset-outline-transition, var(--presetOutlineTransition));
-  }
-  :where(:not(:active).focus-visible).js-focus-visible, .js-focus-visible :where(:not(:active).focus-visible) {
-    transition-duration: 0.25s;
   }
   :where(:not(:active):focus-visible) {
     transition-duration: 0.25s;
@@ -98,6 +88,7 @@
 
 :where(h1, h2, h3, h4, h5, h6) {
   text-wrap: balance;
+  font-feature-settings: "lnum";
   font-variant-numeric: lining-nums;
 }
 
@@ -152,6 +143,7 @@
 }
 
 :where(td, math, time[datetime*=":"]) {
+  font-feature-settings: "tnum", "lnum";
   font-variant-numeric: tabular-nums lining-nums;
 }
 

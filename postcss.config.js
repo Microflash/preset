@@ -5,13 +5,8 @@ export default function config(ctx) {
 		map: ctx.options.map,
 		plugins: [
 			postcssPresetEnv({
+				stage: 2,
 				preserve: true,
-				features: {
-					"focus-visible-pseudo-class": true,
-					"focus-within-pseudo-class": true,
-					"logical-properties-and-values": true,
-					"logical-resize": true
-				}
 			}),
 		]
 	}

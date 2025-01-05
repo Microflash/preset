@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [5.0.4] - 2025-01-05
+
+### Changed
+
+- Use a less opinionated PostCSS configuration
+
+### Fixed
+
+- `font-feature-settings` for headings, `td`, `math`, and `time` elements
+
 ## [5.0.3] - 2024-12-21
 
 ### Changed
@@ -170,21 +180,22 @@ Some of the properties in the reset are now customizable through CSS properties.
 - `--preset-dialog-backdrop-filter` to override the backdrop filter of the dialog (fallback value: `blur(25px)`)
 - `--preset-table-caption-side` to customize caption position of a table caption (fallback value: `bottom`)
 
-[5.0.3]: https://github.com/Microflash/rehype-starry-night/compare/5.0.2...5.0.3
-[5.0.2]: https://github.com/Microflash/rehype-starry-night/compare/5.0.1...5.0.2
-[5.0.1]: https://github.com/Microflash/rehype-starry-night/compare/5.0.0...5.0.1
-[5.0.0]: https://github.com/Microflash/rehype-starry-night/compare/4.1.0...5.0.0
-[4.1.0]: https://github.com/Microflash/rehype-starry-night/compare/4.0.3...4.1.0
-[4.0.3]: https://github.com/Microflash/rehype-starry-night/compare/4.0.2...4.0.3
-[4.0.2]: https://github.com/Microflash/rehype-starry-night/compare/4.0.1...4.0.2
-[4.0.1]: https://github.com/Microflash/rehype-starry-night/compare/4.0.0...4.0.1
-[4.0.0]: https://github.com/Microflash/rehype-starry-night/compare/3.1.0...4.0.0
-[3.1.0]: https://github.com/Microflash/rehype-starry-night/compare/3.0.0...3.1.0
-[3.0.0]: https://github.com/Microflash/rehype-starry-night/compare/2.0.0...3.0.0
-[2.0.0]: https://github.com/Microflash/rehype-starry-night/compare/1.5.1...2.0.0
-[1.5.1]: https://github.com/Microflash/rehype-starry-night/compare/1.5.0...1.5.1
-[1.5.0]: https://github.com/Microflash/rehype-starry-night/compare/1.0.3...1.5.0
-[1.0.3]: https://github.com/Microflash/rehype-starry-night/compare/1.0.2...1.0.3
-[1.0.2]: https://github.com/Microflash/rehype-starry-night/compare/1.0.1...1.0.2
-[1.0.1]: https://github.com/Microflash/rehype-starry-night/compare/1.0.0...1.0.1
-[1.0.0]: https://github.com/Microflash/rehype-starry-night/releases/tag/1.0.0
+[5.0.4]: https://github.com/Microflash/preset/compare/5.0.3...5.0.4
+[5.0.3]: https://github.com/Microflash/preset/compare/5.0.2...5.0.3
+[5.0.2]: https://github.com/Microflash/preset/compare/5.0.1...5.0.2
+[5.0.1]: https://github.com/Microflash/preset/compare/5.0.0...5.0.1
+[5.0.0]: https://github.com/Microflash/preset/compare/4.1.0...5.0.0
+[4.1.0]: https://github.com/Microflash/preset/compare/4.0.3...4.1.0
+[4.0.3]: https://github.com/Microflash/preset/compare/4.0.2...4.0.3
+[4.0.2]: https://github.com/Microflash/preset/compare/4.0.1...4.0.2
+[4.0.1]: https://github.com/Microflash/preset/compare/4.0.0...4.0.1
+[4.0.0]: https://github.com/Microflash/preset/compare/3.1.0...4.0.0
+[3.1.0]: https://github.com/Microflash/preset/compare/3.0.0...3.1.0
+[3.0.0]: https://github.com/Microflash/preset/compare/2.0.0...3.0.0
+[2.0.0]: https://github.com/Microflash/preset/compare/1.5.1...2.0.0
+[1.5.1]: https://github.com/Microflash/preset/compare/1.5.0...1.5.1
+[1.5.0]: https://github.com/Microflash/preset/compare/1.0.3...1.5.0
+[1.0.3]: https://github.com/Microflash/preset/compare/1.0.2...1.0.3
+[1.0.2]: https://github.com/Microflash/preset/compare/1.0.1...1.0.2
+[1.0.1]: https://github.com/Microflash/preset/compare/1.0.0...1.0.1
+[1.0.0]: https://github.com/Microflash/preset/releases/tag/1.0.0
