@@ -1,4 +1,4 @@
-/*! Preset v5.0.4 | MIT License | https://github.com/Microflash/preset */
+/*! Preset v6.0.0 | MIT License | https://github.com/Microflash/preset */
 *, ::before, ::after {
   box-sizing: border-box;
 }
@@ -21,10 +21,12 @@
           text-size-adjust: 100%;
   color-scheme: light dark;
   hanging-punctuation: first last;
-  interpolate-size: allow-keywords;
 }
 
 @media (prefers-reduced-motion: no-preference), (update: fast) {
+  :where(html) {
+    interpolate-size: allow-keywords;
+  }
   :where(html):focus-within {
     scroll-behavior: smooth;
   }
@@ -50,6 +52,7 @@
   -moz-tab-size: var(--preset-tab-size, 2);
     -o-tab-size: var(--preset-tab-size, 2);
        tab-size: var(--preset-tab-size, 2);
+  -webkit-font-smoothing: antialiased;
 }
 
 :where([hidden]:not([hidden=until-found])) {
@@ -154,6 +157,8 @@
   font-size: inherit;
   letter-spacing: inherit;
   word-spacing: inherit;
+  font-feature-settings: inherit;
+  font-variation-settings: inherit;
 }
 
 :where(select, textarea) {

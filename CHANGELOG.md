@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [6.0.0] - 2025-05-03
+
+### Added
+
+- **Breaking** `-webkit-font-smoothing: antialiased` to make the font rendering on macOS consistent with operating system behavior. This may impact the way font is rendered on the browsers on macOS which still use subpixel antialiasing even though macOS itself has stopped using it since macOS Mojave since 2018.
+- Inherit `font-feature-settings` and `font-variation-settings` on form elements
+
+### Changed
+
+- Make `interpolate-size: allow-keywords` an opt-in to prevent unintended behavior in websites
+
 ## [5.0.4] - 2025-01-05
 
 ### Changed
@@ -180,6 +191,7 @@ Some of the properties in the reset are now customizable through CSS properties.
 - `--preset-dialog-backdrop-filter` to override the backdrop filter of the dialog (fallback value: `blur(25px)`)
 - `--preset-table-caption-side` to customize caption position of a table caption (fallback value: `bottom`)
 
+[6.0.0]: https://github.com/Microflash/preset/compare/5.0.4...6.0.0
 [5.0.4]: https://github.com/Microflash/preset/compare/5.0.3...5.0.4
 [5.0.3]: https://github.com/Microflash/preset/compare/5.0.2...5.0.3
 [5.0.2]: https://github.com/Microflash/preset/compare/5.0.1...5.0.2

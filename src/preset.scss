@@ -1,4 +1,4 @@
-/*! Preset v5.0.4 | MIT License | https://github.com/Microflash/preset */
+/*! Preset v6.0.0 | MIT License | https://github.com/Microflash/preset */
 
 // include content, padding, and border (but not margin) inside the box
 *, ::before, ::after {
@@ -28,12 +28,13 @@
 	// keep hanging punctuation outside the line box
 	// progressive enhancement: only supported by Safari
 	hanging-punctuation: first last;
-	// animate intrinsic sizes, such as height, width, and so on
-	// progressive enhancement: only supported by Chrome 129+
-	interpolate-size: allow-keywords;
 
-	// enable smooth scrolling by default, with opt-out for devices with low refresh rates
 	@media (prefers-reduced-motion: no-preference), (update: fast) {
+		// animate intrinsic sizes, such as height, width, and so on
+		// progressive enhancement: only supported by Chrome 129+
+		interpolate-size: allow-keywords;
+
+		// enable smooth scrolling by default, with opt-out for devices with low refresh rates
 		&:focus-within {
 			scroll-behavior: smooth;
 		}
@@ -59,6 +60,8 @@
 	min-block-size: 100%;
 	// indentation size for code blocks
 	tab-size: var(--preset-tab-size, 2);
+	// make sure browsers on macOS use the default operating system behavior
+	-webkit-font-smoothing: antialiased;
 }
 
 // hide elements with `hidden` attribute, except those with `hidden="until-found"` to keep them available to browser's builtin search
@@ -184,6 +187,8 @@
 	font-size: inherit;
 	letter-spacing: inherit;
 	word-spacing: inherit;
+	font-feature-settings: inherit;
+	font-variation-settings: inherit;
 }
 
 :where(select, textarea) {
