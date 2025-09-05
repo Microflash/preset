@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.0.0] - 2025-09-05
+
+### Added
+
+- `text-wrap: pretty` for blockquote element
+
+### Removed
+
+- **Breaking** Drop sass and directly use CSS
+- `hanging-punctuation` rule since it is more disruptive when applied by default
+
 ## [6.0.0] - 2025-05-03
 
 ### Added
@@ -191,6 +202,7 @@ Some of the properties in the reset are now customizable through CSS properties.
 - `--preset-dialog-backdrop-filter` to override the backdrop filter of the dialog (fallback value: `blur(25px)`)
 - `--preset-table-caption-side` to customize caption position of a table caption (fallback value: `bottom`)
 
+[7.0.0]: https://github.com/Microflash/preset/compare/6.0.0...7.0.0
 [6.0.0]: https://github.com/Microflash/preset/compare/5.0.4...6.0.0
 [5.0.4]: https://github.com/Microflash/preset/compare/5.0.3...5.0.4
 [5.0.3]: https://github.com/Microflash/preset/compare/5.0.2...5.0.3

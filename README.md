@@ -1,4 +1,4 @@
-![preset](./banner.svg)
+<img width="128" alt="Preset" src="icon.png">
 
 [![npm](https://img.shields.io/npm/v/@microflash/preset)](https://www.npmjs.com/package/@microflash/preset)
 [![license](https://img.shields.io/github/license/Microflash/preset)](./LICENSE.md)
@@ -49,25 +49,6 @@ import "https://unpkg.com/@microflash/preset";
 ```
 
 Make sure that this is the first CSS import before including any other CSS files.
-
-If you're using Sass, you can import Sass file instead of the compiled version. This is useful if you want to compile the CSS for custom browser targets.
-
-You can import the Sass file in the entrypoint of your application as follows.
-
-```js
-import "@microflash/preset/scss";
-// or using URL import
-import "https://unpkg.com/@microflash/preset/src/preset.scss";
-```
-
-Alternatively, you can import it in your main Sass file before any other rules.
-
-```scss
-@use "@microflash/preset/scss";
-// rest of the Sass imports
-```
-
-In browser, including the `<link>` before any other stylesheet should do the trick.
 
 ## Browser support
 
