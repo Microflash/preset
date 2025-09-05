@@ -1,6 +1,6 @@
 {
 	"name": "@microflash/preset",
-	"version": "6.0.0",
+	"version": "7.0.0",
 	"description": "A modern CSS preset",
 	"type": "module",
 	"keywords": [
@@ -17,20 +17,18 @@
 	"homepage": "https://github.com/Microflash/preset#readme",
 	"main": "dist/preset.min.css",
 	"exports": {
-		".": "./dist/preset.min.css",
-		"./scss": "./src/preset.scss"
+		".": "./dist/preset.min.css"
 	},
 	"scripts": {
-		"dist": "npm run compile && npm run build && npm run minify",
-		"compile": "sass --no-source-map src/preset.scss dist/preset.css",
+		"dist": "npm run prebuild && npm run build && npm run minify",
+		"prebuild": "cp src/preset.css dist/preset.css",
 		"build": "postcss dist/preset.css --replace --no-map",
 		"minify": "csso dist/preset.css --output dist/preset.min.css"
 	},
 	"devDependencies": {
 		"csso-cli": "^4.0.2",
 		"postcss-cli": "^11.0.1",
-		"postcss-preset-env": "^10.1.6",
-		"sass": "^1.87.0"
+		"postcss-preset-env": "^10.3.1"
 	},
-	"packageManager": "pnpm@10.10.0"
+	"packageManager": "pnpm@10.15.1"
 }

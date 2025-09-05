@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.0.0] - 2025-09-05
+
+### Added
+
+- `text-wrap: pretty` for blockquote element
+
+### Removed
+
+- **Breaking** Drop sass and directly use CSS
+- `hanging-punctuation` rule since it is more disruptive when applied by default
+
 ## [6.0.0] - 2025-05-03
 
 ### Added
