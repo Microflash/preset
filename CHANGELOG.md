@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [8.0.1] - 2025-09-27
+
+### Fixed
+
+- Apply `line-height` over individual elements due to `ex` unit relative to element's font size
+
 ## [8.0.0] - 2025-09-27
 
 ### Added
@@ -223,6 +229,7 @@ Some of the properties in the reset are now customizable through CSS properties.
 - `--preset-dialog-backdrop-filter` to override the backdrop filter of the dialog (fallback value: `blur(25px)`)
 - `--preset-table-caption-side` to customize caption position of a table caption (fallback value: `bottom`)
 
+[8.0.1]: https://github.com/Microflash/preset/compare/8.0.0...8.0.1
 [8.0.0]: https://github.com/Microflash/preset/compare/7.0.1...8.0.0
 [7.0.1]: https://github.com/Microflash/preset/compare/7.0.0...7.0.1
 [7.0.0]: https://github.com/Microflash/preset/compare/6.0.0...7.0.0
