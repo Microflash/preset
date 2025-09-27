@@ -1,4 +1,4 @@
-/*! Preset v7.0.1 | MIT License | https://github.com/Microflash/preset */
+/*! Preset v8.0.0 | MIT License | https://github.com/Microflash/preset */
 
 /* include content, padding, and border (but not margin) inside the box */
 *,
@@ -7,15 +7,12 @@
 	box-sizing: border-box;
 }
 
-* {
-	/*
-	line-height based on font x-height and `font-size`
-	scales well for all text sizes including large headings
-	*/
-	line-height: var(--preset-line-height, calc(0.3rem + 2ex + 0.3rem));
-
-	/* prevent text overflow for inline elements */
-	overflow-wrap: break-word;
+/* 
+ * increase specificity of [hidden] to accidentally unhide elements with the [hidden] attribute,
+ * except those with `hidden="until-found"` to keep them available to browser's builtin search
+ */
+[hidden]:not([hidden="until-found"]) {
+	display: none !important;
 }
 
 /* zero margin on all elements, except dialogs (to preserve their centered position) */
@@ -27,11 +24,26 @@
 	/* allow percentage based `block-size` for the children of document */
 	block-size: 100%;
 
+	/* opt into user's color scheme preferences */
+	color-scheme: light dark;
+
 	/* prevent adjustments of `font-size` after orientation changes */
 	text-size-adjust: 100%;
 
-	/* opt into user's color scheme preferences */
-	color-scheme: light dark;
+	/*
+	 * line-height based on font x-height and `font-size`
+	 * scales well for all text sizes including large headings
+	 * 
+	 * since non-latin languages can have different ascenders and descenders,
+	 * we may want to tweak the line-height base on `lang` attribute
+	 */
+	line-height: var(--preset-line-height, calc(0.3rem + 2ex + 0.3rem));
+
+	/* prevent text overflow for inline elements */
+	overflow-wrap: break-word;
+
+	/* optimize text rendering for legibility */
+	text-rendering: optimizeLegibility;
 }
 
 :root {
@@ -49,9 +61,9 @@
 @media (prefers-reduced-motion: no-preference), (update: fast) {
 	:where(html) {
 		/*
-		animate intrinsic sizes, such as block-size, inline-size, and so on
-		progressive enhancement: only supported by Chrome 129+
-		*/
+		 * animate intrinsic sizes, such as block-size, inline-size, and so on
+		 * progressive enhancement: only supported by Chrome 129+
+		 */
 		interpolate-size: allow-keywords;
 	}
 
@@ -75,21 +87,19 @@
 /* put some breathing room between a targeted element and the edges of the scrollport */
 :where(:target) {
 	scroll-margin-block: var(--preset-scroll-offset, 3rem);
-	scroll-margin-block: var(--preset-scroll-offset, 3rlh); /* fallback for browsers that support `rlh` */
+	/* progressive enhancement: use `rlh` line-height unit if supported */
+	scroll-margin-block: var(--preset-scroll-offset, 3rlh);
 }
 
 :where(body) {
 	/* allow percentage based `block-size` for the children of body */
 	min-block-size: 100%;
+	/* progressive enhancement: use `dvb` viewport unit if supported */
+	min-block-size: 100dvb;
 	/* indentation size for code blocks */
 	tab-size: var(--preset-tab-size, 2);
 	/* make sure browsers on macOS use the default operating system behavior */
 	-webkit-font-smoothing: antialiased;
-}
-
-/* hide elements with `hidden` attribute, except those with `hidden="until-found"` to keep them available to browser's builtin search */
-:where([hidden]:not([hidden="until-found"])) {
-	display: none;
 }
 
 /* position the `background-image` to cover the box with no repetition */
@@ -112,9 +122,9 @@
 	/* balance text across lines */
 	text-wrap: balance;
 	/*
-	position numbers on baseline
-	progressive enhancement: supported in fonts with this opentype feature
-	*/
+	 * position numbers on baseline
+	 * progressive enhancement: supported in fonts with this opentype feature
+	 */
 	font-feature-settings: "lnum";
 	font-variant-numeric: lining-nums;
 }
@@ -178,9 +188,9 @@
 }
 
 /*
-set numbers at same size and position them on baseline
-progressive enhancement: supported in fonts with these opentype features
-*/
+ * set numbers at same size and position them on baseline
+ * progressive enhancement: supported in fonts with these opentype features
+ */
 :where(td, math, time[datetime*=":"]) {
 	font-feature-settings: "tnum", "lnum";
 	font-variant-numeric: tabular-nums lining-nums;
@@ -191,30 +201,32 @@ progressive enhancement: supported in fonts with these opentype features
 :where(input[type="file"])::file-selector-button {
 	color: inherit;
 	font: inherit;
-	font-size: inherit;
-	letter-spacing: inherit;
-	word-spacing: inherit;
 	font-feature-settings: inherit;
 	font-variation-settings: inherit;
+	letter-spacing: inherit;
+	word-spacing: inherit;
 }
 
 :where(select, textarea) {
 	/*
-	allow textarea to adjust its size to fit its contents
-	progressive enhancement: only supported by Chrome
-	*/
+	 * allow textarea to adjust its size to fit its contents
+	 * progressive enhancement: only supported by Chrome
+	 */
 	field-sizing: content;
 }
 
 :where(textarea) {
 	/* prevent textarea to overflow the containers when resized horizontally */
 	resize: vertical;
-	resize: block; /* fallback based on writing mode in supported browsers */
+	/* progressive enhancement: use logical property if supported */
+	resize: block;
 }
 
 /* make sure textareas without `rows` attribute are not tiny */
 :where(textarea:not([rows])) {
 	min-block-size: 10em;
+	/* progressive enhancement: use `lh` line-height unit if supported */
+	min-block-size: 5lh;
 }
 
 /* explicit cursor to indicate clickable elements */
@@ -249,6 +261,7 @@ progressive enhancement: supported in fonts with these opentype features
 	button,
 	input,
 	label[for],
+	progress,
 	select,
 	summary,
 	textarea,
@@ -276,14 +289,6 @@ progressive enhancement: supported in fonts with these opentype features
 }
 
 /* explicit cursor to indicate disabled elements */
-:where(
-	button,
-	input[type="button"],
-	input[type="image"],
-	input[type="submit"],
-	input[type="reset"],
-	[role="button"]
-)[disabled],
-:where(input[type="file"][disabled])::file-selector-button {
+:where([disabled]) {
 	cursor: not-allowed;
 }

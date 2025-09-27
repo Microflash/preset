@@ -1,4 +1,4 @@
-/*! Preset v7.0.1 | MIT License | https://github.com/Microflash/preset */
+/*! Preset v8.0.0 | MIT License | https://github.com/Microflash/preset */
 
 *,
 ::before,
@@ -6,11 +6,8 @@
 	box-sizing: border-box;
 }
 
-* {
-	line-height: calc(0.3rem + 2ex + 0.3rem);
-	line-height: var(--preset-line-height, calc(0.3rem + 2ex + 0.3rem));
-	word-wrap: break-word;
-	overflow-wrap: break-word;
+[hidden]:not([hidden="until-found"]) {
+	display: none !important;
 }
 
 :where(:not(dialog)) {
@@ -19,10 +16,20 @@
 
 :where(html) {
 	height: 100%;
+
+	color-scheme: light dark;
+
 	-webkit-text-size-adjust: 100%;
 	   -moz-text-size-adjust: 100%;
 	        text-size-adjust: 100%;
-	color-scheme: light dark;
+
+	line-height: calc(0.3rem + 2ex + 0.3rem);
+	line-height: var(--preset-line-height, calc(0.3rem + 2ex + 0.3rem));
+
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+
+	text-rendering: optimizeLegibility;
 }
 
 :root {
@@ -64,6 +71,7 @@
 
 :where(body) {
 	min-height: 100%;
+	min-height: 100dvb;
 	-moz-tab-size: 2;
 	  -o-tab-size: 2;
 	     tab-size: 2;
@@ -71,10 +79,6 @@
 	  -o-tab-size: var(--preset-tab-size, 2);
 	     tab-size: var(--preset-tab-size, 2);
 	-webkit-font-smoothing: antialiased;
-}
-
-:where([hidden]:not([hidden="until-found"])) {
-	display: none;
 }
 
 :where(:not(fieldset):not(progress):not(meter)) {
@@ -151,11 +155,10 @@
 :where(input[type="file"])::file-selector-button {
 	color: inherit;
 	font: inherit;
-	font-size: inherit;
-	letter-spacing: inherit;
-	word-spacing: inherit;
 	font-feature-settings: inherit;
 	font-variation-settings: inherit;
+	letter-spacing: inherit;
+	word-spacing: inherit;
 }
 
 :where(select, textarea) {
@@ -169,6 +172,7 @@
 
 :where(textarea:not([rows])) {
 	min-height: 10em;
+	min-height: 5lh;
 }
 
 :where(
@@ -193,6 +197,7 @@
 	button,
 	input,
 	label[for],
+	progress,
 	select,
 	summary,
 	textarea,
@@ -218,14 +223,6 @@
 	        user-select: none;
 }
 
-:where(
-	button,
-	input[type="button"],
-	input[type="image"],
-	input[type="submit"],
-	input[type="reset"],
-	[role="button"]
-)[disabled],
-:where(input[type="file"][disabled])::file-selector-button {
+:where([disabled]) {
 	cursor: not-allowed;
 }
